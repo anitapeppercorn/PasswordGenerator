@@ -31,12 +31,17 @@ function generatePassword() {
     includeNumbers = confirm("Would you like numbers in your password?");
     includeSymbols = confirm("Would you like special case in your password?");
   }
+  // if no characters are selected
+  if ((includeLowercase === false) && (includeUppercase === false) && (includeNumbers === false) && (includeSymbols === false)) {
+    prompt("Oops! Please choose at least on character type");
+  }
 
 // randrom number generator
 // defining the function to generate password
 // by default lowercase characters are included here. if other character types 
 // are included their character codes are concatenated to the total array
-  let charCodes = LOWERCASE_CHAR_CODES
+  let charCodes = [] 
+  if (includeLowercase === true ) charCodes = charCodes.concat(LOWERCASE_CHAR_CODES)
   if (includeUppercase === true ) charCodes = charCodes.concat(UPPERCASE_CHAR_CODES)
   if (includeSymbols === true) charCodes = charCodes.concat(SYMBOL_CHAR_CODES)
   if (includeNumbers=== true) charCodes = charCodes.concat(NUMBER_CHAR_CODES)
