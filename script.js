@@ -17,23 +17,23 @@ function generatePassword() {
 // first prompt to ask user to enter length between 8 and 128
   characterAmount = parseInt(
     prompt(
-      "Welcome. You will now be asked a series of prompts. Please enter the length between 8 and 128 characters"
+      "Welcome. You will now be asked a series of questions over a screen prompt. Let's start with the first one. Please enter a number to select a password length between 8 and 128 characters"
     )
   );
 
-  // conditional for Not a Number, <8 and >128 characters
+  // Conditional for Not a Number, <8 and >128 characters
   if (isNaN(characterAmount) || characterAmount < 8 || characterAmount > 128) {
     characterAmount = parseInt;
-    prompt("Oops! Please enter a password between 8 and 128 characters");
+    alert("Oops! You must choose a valid number for password length. Please restart the password generator and enter a desired password length between 8 and 128 characters");
   } else {
     includeLowercase = confirm("Would you like lower case in your password?");
     includeUppercase = confirm("Would you like upper case in your password?");
     includeNumbers = confirm("Would you like numbers in your password?");
     includeSymbols = confirm("Would you like special case in your password?");
   }
-  // if no characters are selected
+  // if no character types are selected
   if ((includeLowercase === false) && (includeUppercase === false) && (includeNumbers === false) && (includeSymbols === false)) {
-    prompt("Oops! Please choose at least on character type");
+    alert("Oops! You must choose at least one type of character to generate the password. Please restart the password generator and choose at least one character type");
   }
 
 // randrom number generator
