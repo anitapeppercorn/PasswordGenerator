@@ -1,6 +1,6 @@
-#This is a JavaScript Password Generator
+# This is a JavaScript Password Generator
 The content is hosted in https://anitapeppercorn.github.io/PasswordGenerator/
-# The location of the repository is anitapeppercorn / PasswordGenerator
+#The location of the repository is anitapeppercorn / PasswordGenerator
 
 I have created an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It features  a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
 
